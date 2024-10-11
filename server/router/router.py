@@ -4,7 +4,6 @@ from fastapi.security import OAuth2PasswordBearer
 from fastapi import APIRouter, Depends, File, UploadFile
 import shutil
 
-from PdBaseKits.llm.chat import PoemInfo
 from PdBaseKits.logger.logQueue import logQueue
 from PdBaseKits.logger.logType import LogType
 from PdBaseKits.token.tokenUtil import createAccessToken, ACCESS_TOKEN_EXPIRE_MINUTES, authenticate, decodeAccessToken
