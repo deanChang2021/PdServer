@@ -1,0 +1,16 @@
+PyQt5
+fastapi
+uvicorn
+requests
+rich
+fake-useragent
+pyjwt
+pycryptodome
+python-multipart
+pytesseract
+Pillow
+fastapi-limiter
+langchain_core
+langchain_community
+pydantic
+redis==5.1.1
