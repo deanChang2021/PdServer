@@ -10,7 +10,4 @@ python-multipart
 pytesseract
 Pillow
 fastapi-limiter
-langchain_core
-langchain_community
-pydantic
 redis==5.1.1
