@@ -1,0 +1,14 @@
+<RCC>
+ <qresource>
+	 <file>welcome.png</file>
+	 <file>stockStic.png</file>
+	 <file>spider.png</file>
+	 <file>logo.png</file>
+	 <file>chkdata.png</file>
+	 <file>alystock.png</file>
+	 <file>alyindustry.png</file>
+	 <file>stockTrack.png</file>
+	 <file>dpfx.png</file>
+	 <file>gzh.jpg</file>
+ </qresource>
+</RCC>
