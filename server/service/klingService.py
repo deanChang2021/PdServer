@@ -6,7 +6,7 @@ from fastapi import UploadFile
 from PdBaseKits.AES import aesECBDecrypt
 from PdBaseKits.OCR.ocr import OCR
 from PdBaseKits.RedisLoader import RedisCntType
-from PdBaseKits.llm.chat import LLM, PoemInfo
+
 from PdBaseKits.logger.logQueue import logQueue
 from PdBaseKits.redis.RedisUtil import redisUtil
 from PdBaseKits.tools.CommonTools import getSaveUploadFilePath, getFileName
@@ -88,16 +88,3 @@ class klingService:
         return sysFileName
 
 
-    def parsePoemTask(self, fileName) -> tuple[str, PoemInfo]:
-        filePath = getSaveUploadFilePath() + fileName
-        logging.info("filePath:" + filePath)
-
-
-        poem:str = OCR().ocr(filePath, "chi_sim")
-        ret = LLM().chatPoem(poem)
-
-        redisUtil.incrKey(RedisCntType.POEM_PARSE_TOTALS)
-
-        logging.info("--- after chat ----")
-        logging.info(ret)
-        return poem, ret
